@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Global Link Marketing | Development Engagements</title>
+  <meta name="description" content="Selected engagements from Global Link Marketing — real estate developments, estate land projects, and institutional marketing across Kenya and beyond.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-filter {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px;
+    }
+    .filter-btn {
+      font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      padding: 10px 22px; border-radius: 999px;
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      color: var(--text-muted); cursor: pointer; transition: var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent); color: #080c10; border-color: var(--accent);
+    }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .project-full-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: var(--transition);
+    }
+    .project-full-card:hover {
+      border-color: var(--border); transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,.5);
+    }
+    .project-full-img { aspect-ratio: 16/10; overflow: hidden; }
+    .project-full-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .project-full-card:hover .project-full-img img { transform: scale(1.06); }
+    .project-full-body { padding: 28px; }
+    .project-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 10px; display: block;
+    }
+    .project-title   { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+    .project-summary { font-size: 13px; color: var(--text-muted); line-height: 1.75; }
+    .project-footer  { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-subtle); }
+    .project-meta    { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: .08em; }
+    .project-link    { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .06em; transition: gap .2s; display: inline-flex; align-items: center; gap: 6px; }
+    .project-link:hover { gap: 10px; }
+    .project-hero-card {
+      grid-column: span 2;
+    }
+    .project-hero-card .project-full-img { aspect-ratio: 21/10; }
+    @media (max-width:900px) {
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .project-hero-card { grid-column: span 2; }
+    }
+    @media (max-width:600px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-hero-card { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader"><div class="preloader-mark">GLM</div><div class="preloader-bar"><div class="preloader-progress"></div></div></div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/Main logo.png" alt="Global Link Marketing" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="philosophy.html" class="nav-link">Philosophy</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="projects.html" class="nav-link active">Projects</a></li>
+      <li><a href="insights.html" class="nav-link">Insights</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary" style="font-size:12px;padding:12px 24px;">Let's Talk</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="leadership.html">Leadership</a><a href="philosophy.html">Philosophy</a>
+  <a href="services.html">Services</a><a href="projects.html">Projects</a>
+  <a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb" style="margin-bottom:20px;">
+        <a href="index.html">Home</a><span>›</span><span>Projects</span>
+      </div>
+      <span class="badge">Portfolio</span>
+      <h1 class="page-hero-title">
+        Engagements That<br>Moved <em style="font-style:normal;color:var(--accent);">Markets</em>
+      </h1>
+      <p style="font-size:18px;color:var(--text-muted);max-width:580px;margin-top:24px;line-height:1.8;">
+        A selective record of strategic marketing engagements — from regional estate developments to landmark institutional projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS GRID ── -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="projects-filter">
+      <button class="filter-btn active">All Projects</button>
+      <button class="filter-btn">Real Estate</button>
+      <button class="filter-btn">Land Development</button>
+      <button class="filter-btn">Brand & Events</button>
+      <button class="filter-btn">Commercial</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Featured -->
+      <div class="project-full-card project-hero-card fade-up">
+        <div class="project-full-img">
+          <img src="images/hero_background.png" alt="Realty Development Group">
+        </div>
+        <div class="project-full-body">
+          <span class="project-tag">Real Estate Development · Strategic Marketing Engagement</span>
+          <h2 class="project-title">Realty Development Group</h2>
+          <p class="project-summary">A comprehensive strategic marketing engagement for one of Kenya's leading property development groups. We designed the full positioning strategy, investor communication framework, and buyer journey architecture — resulting in above-target absorption rates across multiple development phases.</p>
+          <div class="project-footer">
+            <span class="project-meta">Kenya · Ongoing</span>
+            <a href="https://realtydevelopmentgroup.co.ke" class="project-link" target="_blank">Visit Project <span>→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Isinya Chuna -->
+      <div class="project-full-card fade-up">
+        <div class="project-full-img">
+          <img src="images/team_faith.png" alt="Isinya Chuna Estate">
+        </div>
+        <div class="project-full-body">
+          <span class="project-tag">Land Development · Estate Marketing</span>
+          <h2 class="project-title">Isinya Chuna Estate</h2>
+          <p class="project-summary">Strategic marketing for a premium estate land development in Kenya's emerging satellite property corridor. We engineered the value narrative, defined the buyer psychographic, and designed a progressive engagement strategy that created a community of committed buyers before site launch.</p>
+          <div class="project-footer">
+            <span class="project-meta">Kenya · Completed</span>
+            <a href="https://isinyachunaestate.co.ke" class="project-link" target="_blank">Visit Project <span>→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rescom -->
+      <div class="project-full-card fade-up">
+        <div class="project-full-img">
+          <img src="images/team_njuki.png" alt="Rescom Development Group">
+        </div>
+        <div class="project-full-body">
+          <span class="project-tag">Commercial Development · Brand Positioning</span>
+          <h2 class="project-title">Rescom Development Group</h2>
+          <p class="project-summary">Brand strategy and market positioning for a commercial property development principal. Our engagement focused on establishing institutional credibility, redesigning the investor communication stack, and positioning the group for regional expansion through strategic narrative.</p>
+          <div class="project-footer">
+            <span class="project-meta">Kenya · Active</span>
+            <a href="https://rescomdevelopmentgroup.co.ke" class="project-link" target="_blank">Visit Project <span>→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phumola -->
+      <div class="project-full-card fade-up">
+        <div class="project-full-img">
+          <img src="assets/Logo 2.png" alt="PHU Molo Marathon">
+        </div>
+        <div class="project-full-body">
+          <span class="project-tag">Brand & Events · Community Engagement</span>
+          <h2 class="project-title">PHU Molo Marathon</h2>
+          <p class="project-summary">Brand strategy and marketing advisory for a landmark Kenyan sporting and community event. Our engagement designed the event's communication architecture, sponsor value narrative, and community outreach strategy — driving participation and brand partnership uptake.</p>
+          <div class="project-footer">
+            <span class="project-meta">Kenya · Recurring</span>
+            <a href="https://phumolomarathon.co.ke" class="project-link" target="_blank">Visit Project <span>→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nationwide Mortgage -->
+      <div class="project-full-card fade-up">
+        <div class="project-full-img">
+          <img src="images/peter_wairegi.png" alt="Nationwide Mortgage Company">
+        </div>
+        <div class="project-full-body">
+          <span class="project-tag">Financial Services · Consumer Marketing</span>
+          <h2 class="project-title">Nationwide Mortgage Company</h2>
+          <p class="project-summary">As CEO, Peter Wairegi led the full marketing and positioning strategy for this American mortgage institution. The engagement covered consumer acquisition, broker network development, and institutional credibility architecture in a highly regulated and competitive market.</p>
+          <div class="project-footer">
+            <span class="project-meta">United States · Historical</span>
+            <a href="#" class="project-link">View Case Study <span>→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- University Lecturing -->
+      <div class="project-full-card fade-up">
+        <div class="project-full-img" style="background:linear-gradient(135deg,#111820,#0a0f1e);display:flex;align-items:center;justify-content:center;aspect-ratio:16/10;">
+          <div style="font-size:80px;">🏛️</div>
+        </div>
+        <div class="project-full-body">
+          <span class="project-tag">Institutional · Academic Engagement</span>
+          <h2 class="project-title">University Real Estate Programs</h2>
+          <p class="project-summary">A decade of lecturing in real estate, development economics, marketing strategy, and finance at university level. This academic engagement informs our practice at Global Link Marketing — ensuring every strategy is grounded in rigorous intellectual frameworks, not just market habit.</p>
+          <div class="project-footer">
+            <span class="project-meta">USA & Kenya · Ongoing</span>
+            <a href="contact.html" class="project-link">Enquire <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NUMBERS ── -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-number">20<span class="stat-suffix">K+</span></div><div class="stat-label">Units Marketed</div></div>
+      <div class="stat-item"><div class="stat-number">$1.5<span class="stat-suffix">B+</span></div><div class="stat-label">Portfolio Value Experience</div></div>
+      <div class="stat-item"><div class="stat-number">4</div><div class="stat-label">Active Engagements</div></div>
+      <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">Continents</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA ── -->
+<section style="padding:100px 0;background:var(--bg-primary);text-align:center;">
+  <div class="container">
+    <span class="badge">New Engagements</span>
+    <h2 class="section-title" style="margin:14px auto 0;max-width:600px;">
+      Is Your Development Ready for<br><em>Strategic Marketing</em>?
+    </h2>
+    <p class="section-body" style="margin:20px auto 40px;">
+      We work with a carefully selected number of clients at any given time. If your development qualifies for our advisory engagement, we would like to hear about it.
+    </p>
+    <a href="contact.html" class="btn btn-primary" style="font-size:16px;padding:20px 44px;">
+      Submit Your Development <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo">
+          <img src="assets/Main logo.png" alt="Global Link Marketing" class="footer-logo-img">
+        </a>
+        <p class="footer-brand-desc">A premium strategic marketing advisory firm specializing in complex, capital-intensive developments.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-links">
+          <li>+254 716 575 954</li>
+          <li>info@globallinkmarketing.co.ke</li>
+          <li>Nairobi, Kenya</li>
+          <li style="margin-top:16px;"><a href="contact.html" class="btn btn-primary" style="font-size:12px;padding:10px 20px;">Strategy Session →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Featured Projects</p>
+        <ul class="footer-links">
+          <li><a href="https://realtydevelopmentgroup.co.ke" target="_blank">Realty Development Group</a></li>
+          <li><a href="https://isinyachunaestate.co.ke" target="_blank">Isinya Chuna Estate</a></li>
+          <li><a href="https://rescomdevelopmentgroup.co.ke" target="_blank">Rescom Development Group</a></li>
+          <li><a href="https://phumolomarathon.co.ke" target="_blank">PHU Molo Marathon</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Global Link Marketing. All rights reserved.</p>
+      <p class="footer-copy">Founded by Peter Wairegi · Nairobi, Kenya · +254 716 575 954</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+<script>
+  window.addEventListener('load', () => { setTimeout(() => { document.getElementById('preloader').classList.add('loaded'); }, 1000); });
+  const navbar = document.getElementById('navbar');
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+  // Filter buttons (visual only)
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

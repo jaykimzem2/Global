@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Link Marketing — Strategic Marketing for High-Capital Developments</title>
+  <meta name="description" content="Global Link Marketing is a premier strategic advisory and marketing firm specializing in complex, capital-intensive developments — real estate, institutional, and infrastructure projects worldwide.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── HOME-SPECIFIC ── */
+    .hero { background: var(--bg-primary); }
+    .services-section { background: var(--bg-secondary); }
+    .projects-section { background: var(--bg-primary); }
+    .about-section    { background: var(--bg-primary); }
+
+    /* Large image cluster on hero right */
+    .hero-cluster {
+      position: absolute; right: -20px; top: 50%;
+      transform: translateY(-50%);
+      width: 46%; display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 14px; padding-right: 0; z-index: 2;
+    }
+    .hc-main {
+      grid-row: 1 / 3;
+      border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+      overflow: hidden; border: 2px solid var(--accent);
+      aspect-ratio: 3/4;
+    }
+    .hc-top {
+      border-radius: var(--radius-lg);
+      overflow: hidden; border: 2px solid rgba(197,232,50,.25);
+      aspect-ratio: 4/3;
+    }
+    .hc-bot {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--accent); padding: 28px;
+      display: flex; flex-direction: column; justify-content: flex-end;
+    }
+    .hc-main img, .hc-top img { width:100%; height:100%; object-fit:cover; }
+    .hc-stat-num {
+      font-size: 48px; font-weight: 900; color: #080c10; line-height: 1;
+    }
+    .hc-stat-lbl { font-size: 12px; font-weight: 700; color: #080c10; text-transform: uppercase; letter-spacing: .08em; margin-top: 4px; }
+
+    /* Clients / logos strip */
+    .clients-strip {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 32px 0;
+    }
+    .clients-inner {
+      display: flex; align-items: center; gap: 60px; flex-wrap: wrap;
+      justify-content: center;
+    }
+    .client-logo {
+      font-size: 13px; font-weight: 700; color: var(--text-dim);
+      letter-spacing: .06em; text-transform: uppercase;
+      transition: color .25s;
+    }
+    .client-logo:hover { color: var(--accent); }
+
+    /* Featured projects (Degency layout) */
+    .projects-featured {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+    }
+    .project-large { grid-row: 1 / 3; }
+    .project-large .project-card { aspect-ratio: 3/4; }
+
+    /* Testimonial */
+    .testimonial-wrap {
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl); padding: 60px;
+    }
+    .testimonial-text {
+      font-size: clamp(18px,2.5vw,26px);
+      font-family: 'DM Serif Display', serif; font-style: italic;
+      line-height: 1.6; color: var(--text-white); margin-bottom: 32px;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 16px; }
+    .testimonial-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--accent); color: #080c10;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 18px;
+    }
+    .testimonial-name { font-size: 16px; font-weight: 700; }
+    .testimonial-role { font-size: 12px; color: var(--text-muted); letter-spacing: .06em; }
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-mark">GLM</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+
+<!-- ── NAVIGATION ── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/Main logo.png" alt="Global Link Marketing" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="philosophy.html" class="nav-link">Philosophy</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="insights.html" class="nav-link">Insights</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary" style="font-size:12px;padding:12px 24px;">Let's Talk</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="philosophy.html">Philosophy</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container" style="width:100%;max-width:1240px;margin:0 auto;padding:0 40px;">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="badge">Strategic Marketing Advisory</span>
+      </div>
+      <h1 class="hero-title fade-up">
+        Where Strategy<br>Meets <em>Market</em><br>Mastery
+      </h1>
+      <p class="hero-body fade-up">
+        We engineer market demand for large-scale developments, landmark projects, and high-capital ventures. Not a marketing agency — a strategic intelligence partner for developers who are reshaping landscapes.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="contact.html" class="btn btn-primary">
+          Request a Strategy Session <span class="arrow">→</span>
+        </a>
+        <a href="about.html" class="btn btn-outline">Our Approach</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dual-image cluster -->
+  <div class="hero-cluster" style="display:none;" id="heroCluster">
+    <div class="hc-main">
+      <img src="assets/CEO Peter Wairegi.png" alt="Strategic consulting">
+    </div>
+    <div class="hc-top">
+      <img src="assets/Njuki.jpeg" alt="Team">
+    </div>
+    <div class="hc-bot">
+      <div class="hc-stat-num">40<span style="font-size:.5em">+</span></div>
+      <div class="hc-stat-lbl">Years of Strategic Excellence</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TICKER ── -->
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack">
+    <span class="ticker-item">Strategic Positioning</span>
+    <span class="ticker-item">Demand Engineering</span>
+    <span class="ticker-item">Real Estate Development Marketing</span>
+    <span class="ticker-item">Investor Communication</span>
+    <span class="ticker-item">Market Psychology</span>
+    <span class="ticker-item">High-Capital Project Advisory</span>
+    <span class="ticker-item">Behavioral Economics</span>
+    <span class="ticker-item">Institutional Expansion</span>
+    <span class="ticker-item">Strategic Positioning</span>
+    <span class="ticker-item">Demand Engineering</span>
+    <span class="ticker-item">Real Estate Development Marketing</span>
+    <span class="ticker-item">Investor Communication</span>
+    <span class="ticker-item">Market Psychology</span>
+    <span class="ticker-item">High-Capital Project Advisory</span>
+    <span class="ticker-item">Behavioral Economics</span>
+    <span class="ticker-item">Institutional Expansion</span>
+  </div>
+</div>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-number">20<span class="stat-suffix">K+</span></div>
+        <div class="stat-label">Residential Units Sold</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-number">$1.5<span class="stat-suffix">B+</span></div>
+        <div class="stat-label">Loan Portfolio Experience</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-number">40<span class="stat-suffix">+</span></div>
+        <div class="stat-label">Years of Market Intelligence</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Continents of Operations</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CLIENTS STRIP ── -->
+<div class="clients-strip">
+  <div class="container">
+    <div class="clients-inner">
+      <span class="client-logo">PHU Molo Marathon</span>
+      <span class="client-logo">Realty Development Group</span>
+      <span class="client-logo">Isinya Chuna Estate</span>
+      <span class="client-logo">Rescom Development Group</span>
+      <span class="client-logo">Century 21</span>
+      <span class="client-logo">Nationwide Mortgage Co.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABOUT / INTRO ── -->
+<section class="section about-section">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <div class="section-header">
+          <span class="badge">Who We Are</span>
+          <h2 class="section-title">
+            Not a Marketing Agency.<br>A Strategic <em>Intelligence</em> Partner.
+          </h2>
+          <p class="section-body">
+            Founded by Peter Wairegi — a veteran who has sold over 20,000 residential units, managed loan portfolios exceeding $1.5 billion, and advised on developments across three continents. Global Link Marketing operates at the intersection of strategy, psychology, and market intelligence.
+          </p>
+          <p class="section-body" style="margin-top:16px;">
+            We speak the language of investors, developers, and institutional leaders. We do not manage social media feeds. We engineer market demand, shape perception, and position complex ventures for maximum uptake.
+          </p>
+        </div>
+        <div class="hero-actions" style="margin-top:8px;">
+          <a href="about.html" class="btn btn-primary">Discover Our Story <span class="arrow">→</span></a>
+          <a href="leadership.html" class="btn btn-outline">Meet the Team</a>
+        </div>
+      </div>
+      <div class="about-image-wrap fade-up">
+        <div class="about-image-main">
+          <img src="assets/CEO Peter Wairegi.png" alt="Peter Wairegi — Founder, Global Link Marketing">
+        </div>
+        <div class="about-badge-float">
+          <div class="about-badge-number">40+</div>
+          <div class="about-badge-text">Years of Strategic Excellence</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section services-section">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="badge">Our Capabilities</span>
+      <h2 class="section-title">Strategic Services for<br>Complex, <em>High-Value</em> Ventures</h2>
+      <p class="section-body">Every engagement is custom-engineered. We combine timeless marketing psychology with modern digital intelligence to create market strategies that move capital and shift perception.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service-card fade-up">
+        <span class="service-number">01</span>
+        <div class="service-icon">🏗️</div>
+        <h3 class="service-name">Development Project Marketing</h3>
+        <p class="service-desc">Full-spectrum marketing strategy for large-scale real estate and infrastructure developments — from positioning through absorption and investor uptake.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-number">02</span>
+        <div class="service-icon">📊</div>
+        <h3 class="service-name">Market Intelligence & Research</h3>
+        <p class="service-desc">Deep market analysis, demand forecasting, and competitive landscape mapping. Understanding the psychology of your target buyer before a single brick is laid.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-number">03</span>
+        <div class="service-icon">🎯</div>
+        <h3 class="service-name">Strategic Positioning</h3>
+        <p class="service-desc">Crafting the irreplaceable value narrative for your project. Establishing psychological ownership in the mind of your market before competitors enter the conversation.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-number">04</span>
+        <div class="service-icon">💼</div>
+        <h3 class="service-name">Investor Communication</h3>
+        <p class="service-desc">Investment-grade communication materials, pitch strategy, and relationship sequencing designed to attract, educate, and convert high-net-worth investors.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-number">05</span>
+        <div class="service-icon">🔬</div>
+        <h3 class="service-name">Behavioral Economics Advisory</h3>
+        <p class="service-desc">Applying the science of human decision-making to pricing architecture, offer structuring, and buyer journey design for complex developments.</p>
+      </div>
+      <div class="service-card fade-up">
+        <span class="service-number">06</span>
+        <div class="service-icon">🌍</div>
+        <h3 class="service-name">Institutional & Campus Marketing</h3>
+        <p class="service-desc">Marketing strategy for universities, institutional campuses, and large-scale facilities — attracting stakeholders, enrollments, and partnership investors.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="services.html" class="btn btn-outline">View All Capabilities <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── PHILOSOPHY CALLOUT ── -->
+<div style="padding:80px 0;background:var(--bg-primary);">
+  <div class="container">
+    <div class="callout">
+      <p class="callout-quote">
+        "The difference between a development that sells and one that sits is never the product. It is always the strategy, the story, and the sequencing of trust."
+      </p>
+      <p class="callout-attribution">— Peter Wairegi, Founder | Global Link Marketing</p>
+      <div style="margin-top:40px;">
+        <a href="philosophy.html" class="btn btn-primary">Read Our Marketing Philosophy <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PROJECTS ── -->
+<section class="section projects-section">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:20px;">
+      <div>
+        <span class="badge">Our Work</span>
+        <h2 class="section-title" style="margin-top:14px;">Selected <em>Projects</em><br>& Engagements</h2>
+      </div>
+      <a href="projects.html" class="btn btn-outline">View All Projects <span class="arrow">→</span></a>
+    </div>
+    <div class="projects-featured">
+      <div class="project-large">
+        <div class="project-card" style="aspect-ratio:2/3;">
+          <img class="project-card-img" src="images/hero_background.png" alt="Realty Development Group">
+          <div class="project-card-overlay">
+            <div class="project-card-cat">Real Estate Development</div>
+            <h3 class="project-card-name">Realty Development Group</h3>
+            <a href="https://realtydevelopmentgroup.co.ke" target="_blank" class="project-card-link">View Project →</a>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div class="project-card">
+          <img class="project-card-img" src="images/team_njuki.png" alt="Isinya Chuna Estate">
+          <div class="project-card-overlay">
+            <div class="project-card-cat">Land Development</div>
+            <h3 class="project-card-name">Isinya Chuna Estate</h3>
+            <a href="https://isinyachunaestate.co.ke" target="_blank" class="project-card-link">View Project →</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img class="project-card-img" src="assets/Logo 2.png" alt="PHU Molo Marathon">
+          <div class="project-card-overlay">
+            <div class="project-card-cat">Brand & Events</div>
+            <h3 class="project-card-name">PHU Molo Marathon</h3>
+            <a href="https://phumolomarathon.co.ke" target="_blank" class="project-card-link">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS / PHILOSOPHY PREVIEW ── -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="badge">How We Work</span>
+        <h2 class="section-title" style="margin-top:14px;">The <em>Four-Stage</em><br>Trust Architecture</h2>
+        <p class="section-body">Every campaign we design follows a proven progression — engineered to convert interest into long-term commitment. Not through pressure, but through the irresistible logic of compounding value.</p>
+        <div style="margin-top:32px;">
+          <a href="philosophy.html" class="btn btn-primary">Explore Our Philosophy <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div>
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h4 class="step-title">Attract With Minimal Resistance</h4>
+            <p class="step-desc">We engineer entry points that feel natural, not transactional. The first contact creates curiosity and credibility — without demanding commitment.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4 class="step-title">Build Trust Through Insight</h4>
+            <p class="step-desc">We position your development through authoritative content, intelligent narratives, and proof frameworks that remove doubt systematically.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4 class="step-title">Progressively Elevate the Relationship</h4>
+            <p class="step-desc">We move prospects through a carefully designed journey — from awareness to consideration to high-conviction intent — at a pace they control.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4 class="step-title">Convert Into Long-Term Partners</h4>
+            <p class="step-desc">We turn individual transactions into enduring relationships — creating advocates who bring further investors, buyers, and stakeholders into your ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSIGHTS ── -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:20px;">
+      <div>
+        <span class="badge">Thought Leadership</span>
+        <h2 class="section-title" style="margin-top:14px;">Strategic <em>Insights</em><br>From the Field</h2>
+      </div>
+      <a href="insights.html" class="btn btn-outline">All Insights <span class="arrow">→</span></a>
+    </div>
+    <div class="grid-3">
+      <div class="insight-card fade-up">
+        <div class="insight-thumb">
+          <img src="images/hero_background.png" alt="Insight">
+        </div>
+        <div class="insight-body">
+          <div class="insight-meta">
+            <span>Strategy</span><span class="dot">✦</span><span>March 2026</span>
+          </div>
+          <h3 class="insight-title"><a href="insights.html">Why the Most Expensive Developments Are the Easiest to Sell</a></h3>
+          <p class="insight-excerpt">Counterintuitive? Only to those who confuse price with value. Premium positioning works because of psychology, not in spite of it.</p>
+          <a href="insights.html" class="insight-read-more">Read More <span>→</span></a>
+        </div>
+      </div>
+      <div class="insight-card fade-up">
+        <div class="insight-thumb">
+          <img src="images/team_njuki.png" alt="Insight">
+        </div>
+        <div class="insight-body">
+          <div class="insight-meta">
+            <span>Real Estate</span><span class="dot">✦</span><span>Feb 2026</span>
+          </div>
+          <h3 class="insight-title"><a href="insights.html">The Fundamental Error in How Developers Market to Investors</a></h3>
+          <p class="insight-excerpt">Most developer marketing leads with features. Sophisticated investor communication leads with certainty — and the signals that create it.</p>
+          <a href="insights.html" class="insight-read-more">Read More <span>→</span></a>
+        </div>
+      </div>
+      <div class="insight-card fade-up">
+        <div class="insight-thumb">
+          <img src="images/team_faith.png" alt="Insight">
+        </div>
+        <div class="insight-body">
+          <div class="insight-meta">
+            <span>Psychology</span><span class="dot">✦</span><span>Jan 2026</span>
+          </div>
+          <h3 class="insight-title"><a href="insights.html">Behavioral Economics and the Art of Demand Engineering</a></h3>
+          <p class="insight-excerpt">Rory Sutherland was right: value is perception, and perception can be engineered. Here is how we apply this to large-scale development marketing.</p>
+          <a href="insights.html" class="insight-read-more">Read More <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIAL ── -->
+<section style="padding:80px 0;background:var(--bg-secondary);">
+  <div class="container">
+    <div class="testimonial-wrap">
+      <p class="testimonial-text">
+        "Global Link Marketing brought a discipline to our project communication that we had never experienced before. They did not sell us a campaign — they gave us a strategy. The result was a development that sold 70% above absorption targets within the first quarter."
+      </p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">R</div>
+        <div>
+          <div class="testimonial-name">Richard M.</div>
+          <div class="testimonial-role">Managing Director · Real Estate Development Group</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section style="padding:120px 0;background:var(--bg-primary);">
+  <div class="container" style="text-align:center;">
+    <span class="badge" style="margin-bottom:24px;">Begin the Conversation</span>
+    <h2 class="section-title" style="margin:14px auto 0;max-width:700px;">
+      Ready to Engineer Demand for Your <em>Next Development</em>?
+    </h2>
+    <p class="section-body" style="margin:20px auto 40px;">
+      Every landmark project begins with a strategy session. Let us understand your development, your market, and your ambitions — and show you what strategic marketing can unlock.
+    </p>
+    <a href="contact.html" class="btn btn-primary" style="font-size:16px;padding:20px 44px;">
+      Book a Strategy Session <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo">
+          <img src="assets/Main logo.png" alt="Global Link Marketing" class="footer-logo-img">
+        </a>
+        <p class="footer-brand-desc">
+          A premium strategic marketing advisory firm specializing in complex, capital-intensive developments. Where marketing becomes market intelligence.
+        </p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About the Agency</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="philosophy.html">Marketing Philosophy</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Specializations</p>
+        <ul class="footer-links">
+          <li><a href="services.html">Real Estate Development</a></li>
+          <li><a href="services.html">Land & Estate Projects</a></li>
+          <li><a href="services.html">Investor Communication</a></li>
+          <li><a href="services.html">Institutional Marketing</a></li>
+          <li><a href="services.html">Market Positioning</a></li>
+          <li><a href="services.html">Behavioral Advisory</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-links">
+          <li>+254 716 575 954</li>
+          <li>info@globallinkmarketing.co.ke</li>
+          <li>Nairobi, Kenya</li>
+          <li style="margin-top:16px;"><a href="contact.html" class="btn btn-primary" style="font-size:12px;padding:10px 20px;">Strategy Session →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Global Link Marketing. All rights reserved.</p>
+      <p class="footer-copy">Founded by Peter Wairegi · Nairobi, Kenya · +254 716 575 954</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<script>
+  // Preloader hide
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('preloader').classList.add('loaded');
+    }, 1200);
+  });
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+  // Show hero cluster on desktop
+  function checkHeroCluster() {
+    const cl = document.getElementById('heroCluster');
+    if (window.innerWidth > 1100) cl.style.display = 'grid';
+    else cl.style.display = 'none';
+  }
+  checkHeroCluster();
+  window.addEventListener('resize', checkHeroCluster);
+
+  // Fade-up observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

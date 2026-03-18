@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Global Link Marketing | Request a Strategy Session</title>
+  <meta name="description" content="Schedule a confidential strategy session with Global Link Marketing. We work with a select number of high-value development clients at any given time.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-hero-strip {
+      background: var(--accent); padding: 24px 0; text-align: center;
+    }
+    .contact-hero-strip p {
+      font-size: 14px; font-weight: 700; color: #080c10;
+      letter-spacing: .05em;
+    }
+    .engagement-types {
+      display: flex; flex-direction: column; gap: 12px; margin-top: 32px;
+    }
+    .engagement-option {
+      display: flex; align-items: center; gap: 16px;
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md); padding: 20px 24px; cursor: pointer;
+      transition: var(--transition);
+    }
+    .engagement-option:hover { border-color: var(--border); }
+    .engagement-option.selected { border-color: var(--accent); background: var(--accent-glow); }
+    .engagement-radio {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2px solid var(--text-dim); min-width: 20px;
+      display: flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+    }
+    .engagement-option.selected .engagement-radio {
+      border-color: var(--accent); background: var(--accent);
+    }
+    .engagement-option.selected .engagement-radio::after {
+      content: ''; width: 8px; height: 8px; border-radius: 50%; background: #080c10;
+    }
+    .engagement-label { font-size: 15px; font-weight: 700; }
+    .engagement-desc  { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .select-control {
+      width: 100%; background: var(--bg-card);
+      border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
+      padding: 14px 18px; font-family: 'Inter', sans-serif;
+      font-size: 14px; color: var(--text-white); outline: none;
+      appearance: none; cursor: pointer;
+      transition: border-color .2s;
+    }
+    .select-control:focus { border-color: var(--accent); }
+    .success-msg {
+      display: none; text-align: center; padding: 60px 40px;
+      background: var(--accent-glow); border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+    }
+    .success-msg.show { display: block; }
+  </style>
+</head>
+<body>
+  <div id="preloader"><div class="preloader-mark">GLM</div><div class="preloader-bar"><div class="preloader-progress"></div></div></div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/Main logo.png" alt="Global Link Marketing" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+      <li><a href="philosophy.html" class="nav-link">Philosophy</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="insights.html" class="nav-link">Insights</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary" style="font-size:12px;padding:12px 24px;">Let's Talk</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="leadership.html">Leadership</a><a href="philosophy.html">Philosophy</a>
+  <a href="services.html">Services</a><a href="projects.html">Projects</a>
+  <a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+</div>
+
+<!-- ── HERO STRIP ── -->
+<div class="contact-hero-strip" style="margin-top:var(--nav-height);">
+  <p>✦ We work with a carefully selected number of clients — engagements are accepted by qualification ✦</p>
+</div>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" style="padding-top:80px;">
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="badge">Begin the Conversation</span>
+      <h1 class="page-hero-title" style="margin-top:16px;">
+        Request a<br><em style="font-style:normal;color:var(--accent);">Strategy Session</em>
+      </h1>
+      <p style="font-size:18px;color:var(--text-muted);max-width:580px;margin-top:24px;line-height:1.8;">
+        Every engagement begins with a candid, confidential conversation. Tell us about your development, and we will tell you what we see — honestly, and without obligation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT SECTION ── -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- LEFT: Info -->
+      <div>
+        <h2 class="section-title" style="font-size:32px;">Reach the<br><em>Right People</em></h2>
+        <p class="section-body" style="margin-top:16px;">
+          We do not route enquiries through a call centre or a junior account manager. Every first conversation at Global Link Marketing involves someone with the authority and expertise to assess your project properly.
+        </p>
+
+        <div style="margin-top:40px;">
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <p class="contact-detail-label">Office</p>
+              <p class="contact-detail-value">Nairobi, Kenya</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <p class="contact-detail-label">Direct Line</p>
+              <p class="contact-detail-value">+254 716 575 954</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <p class="contact-detail-label">General Enquiries</p>
+              <p class="contact-detail-value">info@globallinkmarketing.co.ke</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">👤</div>
+            <div>
+              <p class="contact-detail-label">Founder — Peter Wairegi</p>
+              <p class="contact-detail-value">peter@globallinkmarketing.co.ke</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">⚙️</div>
+            <div>
+              <p class="contact-detail-label">General Manager — Njuki</p>
+              <p class="contact-detail-value">+254 722 318 801 <br>njuki@globallinkmarketing.co.ke</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📢</div>
+            <div>
+              <p class="contact-detail-label">Marketing Manager — Faith Bett</p>
+              <p class="contact-detail-value">faith@globallinkmarketing.co.ke</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What to expect -->
+        <div style="margin-top:48px;padding:32px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);">
+          <h4 style="font-size:16px;font-weight:800;margin-bottom:20px;">What to Expect</h4>
+          <div class="process-step" style="padding:12px 0;">
+            <div class="step-num" style="min-width:36px;">01</div>
+            <div class="step-body">
+              <p class="step-desc">We review your project brief within 48 hours and determine fit for our capabilities.</p>
+            </div>
+          </div>
+          <div class="process-step" style="padding:12px 0;">
+            <div class="step-num" style="min-width:36px;">02</div>
+            <div class="step-body">
+              <p class="step-desc">A senior member of our team schedules a confidential 60-minute strategy conversation.</p>
+            </div>
+          </div>
+          <div class="process-step" style="padding:12px 0;">
+            <div class="step-num" style="min-width:36px;">03</div>
+            <div class="step-body">
+              <p class="step-desc">We provide our initial strategic assessment — what we see in your market, and what we would do differently.</p>
+            </div>
+          </div>
+          <div class="process-step" style="padding:12px 0;border-bottom:none;">
+            <div class="step-num" style="min-width:36px;">04</div>
+            <div class="step-body">
+              <p class="step-desc">If there is mutual alignment, we design a bespoke engagement proposal for your development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);padding:48px;">
+          <h3 style="font-size:22px;font-weight:800;margin-bottom:8px;">Strategy Session Request</h3>
+          <p style="font-size:13px;color:var(--text-muted);margin-bottom:32px;">All information treated in strict confidence.</p>
+
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" class="form-control" placeholder="Peter" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Wairegi" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" class="form-control" placeholder="you@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" class="form-control" placeholder="+254 700 000 000">
+            </div>
+
+            <div class="form-group">
+              <label for="company">Organisation / Company</label>
+              <input type="text" id="company" class="form-control" placeholder="Development Group Ltd">
+            </div>
+
+            <div class="form-group">
+              <label for="projectType">Primary Project Type *</label>
+              <select id="projectType" class="select-control" required>
+                <option value="" disabled selected>Select your development type</option>
+                <option>Large Residential Development</option>
+                <option>Estate / Land Project</option>
+                <option>Commercial / Retail Development</option>
+                <option>Institutional / Campus Development</option>
+                <option>Mixed-Use Development</option>
+                <option>Infrastructure / National Project</option>
+                <option>Investment / Private Equity</option>
+                <option>Other — Complex Development</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Type of Engagement Sought</label>
+              <div class="engagement-types">
+                <div class="engagement-option" onclick="selectEngagement(this)">
+                  <div class="engagement-radio"></div>
+                  <div>
+                    <div class="engagement-label">Strategic Marketing Advisory</div>
+                    <div class="engagement-desc">Full engagement — positioning, strategy, and execution oversight</div>
+                  </div>
+                </div>
+                <div class="engagement-option" onclick="selectEngagement(this)">
+                  <div class="engagement-radio"></div>
+                  <div>
+                    <div class="engagement-label">Investor Communication Strategy</div>
+                    <div class="engagement-desc">Capital attraction and investor narrative development</div>
+                  </div>
+                </div>
+                <div class="engagement-option" onclick="selectEngagement(this)">
+                  <div class="engagement-radio"></div>
+                  <div>
+                    <div class="engagement-label">Market Positioning Audit</div>
+                    <div class="engagement-desc">Strategic review of your current positioning and recommendations</div>
+                  </div>
+                </div>
+                <div class="engagement-option" onclick="selectEngagement(this)">
+                  <div class="engagement-radio"></div>
+                  <div>
+                    <div class="engagement-label">Initial Consultation Only</div>
+                    <div class="engagement-desc">Exploratory conversation — no commitment required</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top:24px;">
+              <label for="projectBrief">Tell Us About Your Development *</label>
+              <textarea id="projectBrief" class="form-control" placeholder="Describe your project — its scale, location, stage of development, and the key marketing challenge you are facing..." rows="6" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="timeline">Development Timeline</label>
+              <select id="timeline" class="select-control">
+                <option value="" disabled selected>When do you need to bring this to market?</option>
+                <option>Immediately (already launched)</option>
+                <option>Within 3 months</option>
+                <option>3–6 months</option>
+                <option>6–12 months</option>
+                <option>12+ months (pre-planning phase)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:18px;margin-top:8px;">
+              Submit Strategy Session Request <span class="arrow">→</span>
+            </button>
+
+            <p style="text-align:center;font-size:12px;color:var(--text-dim);margin-top:16px;">
+              We respond to all qualified enquiries within 48 hours. Your information is never shared.
+            </p>
+          </form>
+
+          <div class="success-msg" id="successMsg">
+            <div style="font-size:48px;margin-bottom:16px;">✦</div>
+            <h3 style="font-size:24px;font-weight:800;color:var(--accent);margin-bottom:12px;">Request Received</h3>
+            <p style="color:var(--text-muted);line-height:1.7;">Thank you for reaching out. A senior member of our team will review your brief and contact you within 48 hours to schedule your strategy session.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLOSING CALLOUT ── -->
+<section style="padding:80px 0;background:var(--bg-secondary);">
+  <div class="container">
+    <div class="callout">
+      <p class="callout-quote">
+        "We do not take every project that comes through the door. We take the projects where we can make a genuine, measurable difference. That commitment to selectivity is what preserves the quality of every engagement we accept."
+      </p>
+      <p class="callout-attribution">— Peter Wairegi · Founder, Global Link Marketing</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo">
+          <img src="assets/Main logo.png" alt="Global Link Marketing" class="footer-logo-img">
+        </a>
+        <p class="footer-brand-desc">A premium strategic marketing advisory firm specializing in complex, capital-intensive developments.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="philosophy.html">Philosophy</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-links">
+          <li>+254 716 575 954</li>
+          <li>info@globallinkmarketing.co.ke</li>
+          <li>Nairobi, Kenya</li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Leadership</p>
+        <ul class="footer-links">
+          <li>peter@globallinkmarketing.co.ke</li>
+          <li>njuki@globallinkmarketing.co.ke</li>
+          <li>faith@globallinkmarketing.co.ke</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Global Link Marketing. All rights reserved.</p>
+      <p class="footer-copy">Founded by Peter Wairegi · Nairobi, Kenya · +254 716 575 954</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+<script>
+  function selectEngagement(el) {
+    document.querySelectorAll('.engagement-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('successMsg').classList.add('show');
+  }
+  window.addEventListener('load', () => { setTimeout(() => { document.getElementById('preloader').classList.add('loaded'); }, 1000); });
+  const navbar = document.getElementById('navbar');
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+</script>
+</body>
+</html>
