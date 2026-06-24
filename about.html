@@ -235,7 +235,20 @@
 
 <script>
 gsap.registerPlugin(ScrollTrigger);
-gsap.fromTo('#about-hero-left', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, delay: 1.5 });
+gsap.fromTo('#about-hero-left', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, delay: 1 });
+
+document.querySelectorAll('section').forEach(section => {
+    gsap.from(section.querySelectorAll('h2, p, .group, .grid > div'), {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: section,
+            start: 'top 80%'
+        }
+    });
+});
 </script>
 </body>
 </html>

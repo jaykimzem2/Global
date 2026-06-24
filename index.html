@@ -568,7 +568,7 @@
             </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 cards-stagger" id="cap-cards">
-            <div class="stagger-item capability-card group bg-[#121214] border border-white/5 hover:border-brand-orange/30 p-8 rounded-[2rem] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(244,124,32,0.1)] flex flex-col justify-between relative overflow-hidden cursor-pointer hover:-translate-y-1.5" onclick="toggleCapability('strategic-marketing')">
+            <div class="stagger-item opacity-0 capability-card group bg-[#121214] border border-white/5 hover:border-brand-orange/30 p-8 rounded-[2rem] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(244,124,32,0.1)] flex flex-col justify-between relative overflow-hidden cursor-pointer hover:-translate-y-1.5" onclick="toggleCapability('strategic-marketing')">
                 <div class="card-flare"></div>
                 <div>
                     <div class="flex items-center justify-between mb-8">
@@ -589,7 +589,7 @@
                     <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-neutral-400 group-hover:text-white group-hover:bg-brand-orange transition-all"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></div>
                 </div>
             </div>
-            <div class="stagger-item capability-card group bg-[#121214] border border-white/5 hover:border-brand-orange/30 p-8 rounded-[2rem] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(244,124,32,0.1)] flex flex-col justify-between relative overflow-hidden cursor-pointer hover:-translate-y-1.5" onclick="toggleCapability('event-services')">
+            <div class="stagger-item opacity-0 capability-card group bg-[#121214] border border-white/5 hover:border-brand-orange/30 p-8 rounded-[2rem] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(244,124,32,0.1)] flex flex-col justify-between relative overflow-hidden cursor-pointer hover:-translate-y-1.5" onclick="toggleCapability('event-services')">
                 <div class="card-flare"></div>
                 <div>
                     <div class="flex items-center justify-between mb-8">
@@ -610,7 +610,7 @@
                     <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-neutral-400 group-hover:text-white group-hover:bg-brand-orange transition-all"><svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></div>
                 </div>
             </div>
-            <div class="stagger-item capability-card group bg-[#121214] border border-white/5 hover:border-brand-orange/30 p-8 rounded-[2rem] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(244,124,32,0.1)] flex flex-col justify-between relative overflow-hidden cursor-pointer hover:-translate-y-1.5" onclick="toggleCapability('campaign-management')">
+            <div class="stagger-item opacity-0 capability-card group bg-[#121214] border border-white/5 hover:border-brand-orange/30 p-8 rounded-[2rem] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(244,124,32,0.1)] flex flex-col justify-between relative overflow-hidden cursor-pointer hover:-translate-y-1.5" onclick="toggleCapability('campaign-management')">
                 <div class="card-flare"></div>
                 <div>
                     <div class="flex items-center justify-between mb-8">
@@ -657,7 +657,7 @@
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 cards-stagger" id="proj-grid">
-            <div class="stagger-item group relative bg-[#121214] rounded-[2.5rem] overflow-hidden aspect-[4/3] shadow-lg border border-neutral-100/10 cursor-pointer">
+            <div class="stagger-item opacity-0 group relative bg-[#121214] rounded-[2.5rem] overflow-hidden aspect-[4/3] shadow-lg border border-neutral-100/10 cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=85" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 z-10">
@@ -667,7 +667,7 @@
                     </div>
                 </div>
             </div>
-            <div class="stagger-item group relative bg-[#121214] rounded-[2.5rem] overflow-hidden aspect-[4/3] shadow-lg border border-neutral-100/10 cursor-pointer">
+            <div class="stagger-item opacity-0 group relative bg-[#121214] rounded-[2.5rem] overflow-hidden aspect-[4/3] shadow-lg border border-neutral-100/10 cursor-pointer">
                 <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=85" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 z-10">
@@ -798,6 +798,35 @@
 
     gsap.fromTo('#cta-container', { scale: 0.96, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.2, scrollTrigger: { trigger: '#contact', start: 'top 85%' }});
 
+    // About Section reveal
+    gsap.to('#about-left', { opacity: 1, y: 0, duration: 1, scrollTrigger: { trigger: '#about', start: 'top 80%' }});
+    gsap.to('#about-right', { opacity: 1, x: 0, duration: 1, scrollTrigger: { trigger: '#about', start: 'top 80%' }});
+
+    // Capability header reveal
+    gsap.to('#cap-header', { opacity: 1, y: 0, duration: 1, scrollTrigger: { trigger: '#capabilities', start: 'top 80%' }});
+    
+    // Cards stagger
+    document.querySelectorAll('.cards-stagger').forEach(container => {
+        gsap.to(container.querySelectorAll('.stagger-item'), {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            scrollTrigger: {
+                trigger: container,
+                start: 'top 85%'
+            }
+        });
+    });
+
+    // Project header
+    gsap.to('#proj-header', { opacity: 1, y: 0, duration: 1, scrollTrigger: { trigger: '#projects', start: 'top 80%' }});
+
+    // Section dividers
+    document.querySelectorAll('.section-divider').forEach(divider => {
+        gsap.to(divider, { opacity: 1, scaleX: 1, duration: 1.5, ease: 'expo.out', scrollTrigger: { trigger: divider, start: 'top 95%' }});
+    });
+
     // Stats
     ScrollTrigger.create({
         trigger: '#stats',
@@ -847,6 +876,35 @@ function closeVideoModal() { document.getElementById('video-modal').classList.ad
 function toggleCapability(id) {
     const p = document.getElementById('detail-'+id);
     p.classList.toggle('open');
+}
+
+function switchMetric(type) {
+    const val = document.getElementById('metric-value');
+    const bars = document.querySelectorAll('.wave-bar');
+    const tabs = document.querySelectorAll('.metric-tab');
+    
+    tabs.forEach(t => {
+        t.classList.remove('bg-brand-dark', 'border-brand-dark', 'text-white', 'shadow-md');
+        t.classList.add('bg-brand-gray', 'border-neutral-100', 'text-neutral-500');
+    });
+    
+    const active = document.querySelector(`[data-metric="${type}"]`);
+    active.classList.add('bg-brand-dark', 'border-brand-dark', 'text-white', 'shadow-md');
+    active.classList.remove('bg-brand-gray', 'border-neutral-100', 'text-neutral-500');
+
+    let newValue = "4.8%";
+    if(type === 'leads') newValue = "1.2k";
+    if(type === 'roi') newValue = "15.4X";
+
+    gsap.to(val, { opacity: 0, y: -10, duration: 0.2, onComplete: () => {
+        val.innerText = newValue;
+        gsap.to(val, { opacity: 1, y: 0, duration: 0.2 });
+    }});
+
+    bars.forEach(bar => {
+        const h = Math.floor(Math.random() * 70) + 20;
+        gsap.to(bar, { height: h + '%', duration: 0.6, ease: 'power2.out' });
+    });
 }
 </script>
 </body>
