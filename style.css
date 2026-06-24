@@ -1,0 +1,10 @@
+/* 
+ * style.css — Legacy styles kept minimal.
+ * All primary styling is handled through Tailwind CSS CDN
+ * configured in components/header.php via tailwind.config
+ * and supplemented by inline <style> blocks in header.php.
+ *
+ * This file intentionally kept minimal to avoid conflicts.
+ */
+
+/* Any legacy page-specific utility overrides can go here */
