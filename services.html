@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Global Link Marketing — Capabilities Matrix</title>
+    <meta name="description" content="Explore Global Link Marketing Company's specialized institutional services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }, colors: { brand: { orange: '#f47c20', gold: '#f59e0b', dark: '#121214', darker: '#0a0a0b', light: '#fbfbfd', gray: '#f4f4f7' } } } } }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans overflow-x-hidden">
+
+<div id="preloader" class="fixed inset-0 z-[9999] bg-brand-darker flex items-center justify-center">
+    <div class="text-center">
+        <img src="assets/Goldstar Load logo.png" alt="Global Link" id="preloader-logo" class="h-32 mx-auto mb-4 opacity-0">
+        <div class="w-32 h-0.5 bg-white/10 mx-auto rounded-full overflow-hidden"><div id="preloader-bar" class="h-full bg-brand-orange" style="width:0%"></div></div>
+    </div>
+</div>
+
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all py-6">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <a href="index.html"><img src="assets/Goldstar Logo.png" alt="Global Link" class="h-14"></a>
+        <div class="hidden md:flex gap-4 p-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-md">
+            <a href="index.html" class="px-4 py-1.5 text-white/60 hover:text-white text-xs">Home</a>
+            <a href="about.html" class="px-4 py-1.5 text-white/60 hover:text-white text-xs">About</a>
+            <a href="services.html" class="px-4 py-1.5 text-white/60 hover:text-white text-xs">Services</a>
+            <a href="marketing.html" class="px-4 py-1.5 text-white/60 hover:text-white text-xs">Marketing</a>
+            <a href="events.html" class="px-4 py-1.5 text-white/60 hover:text-white text-xs">Events</a>
+        </div>
+        <a href="contact.html" class="bg-brand-orange text-white px-5 py-2.5 rounded-full text-xs font-bold">Let's Connect</a>
+    </div>
+</nav>
+
+<section class="pt-36 pb-20 px-4 md:px-8 bg-brand-darker text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <div id="services-hero" class="max-w-3xl opacity-0">
+            <span class="text-xs font-mono font-semibold text-brand-orange tracking-[0.25em] uppercase mb-6 block">#InstitutionalServiceMatrix</span>
+            <h1 class="font-display font-bold text-4xl md:text-6xl text-white tracking-tight leading-[1.05] mb-6">Specialized <span class="text-brand-orange">Strategic</span> Capabilities</h1>
+            <p class="text-white/50 text-base md:text-lg leading-relaxed max-w-2xl mb-8 font-sans">We provide structured services across primary domains, ensuring alignment with corporate governance and public sector standards.</p>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-orange text-white text-xs font-bold px-6 py-3.5 rounded-full shadow-lg transition-all hover:-translate-y-0.5">Request Capabilities Brief</a>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 bg-white border border-neutral-200 rounded-[2.5rem] hover:border-brand-orange transition-all">
+                <span class="text-xs font-mono text-brand-orange font-bold uppercase mb-4 block">Phase I</span>
+                <h3 class="font-display font-bold text-2xl mb-4">Strategic Positioning</h3>
+                <p class="text-neutral-500 text-sm mb-6">Interrogating market demand and competitive frameworks to establish dominance.</p>
+                <ul class="space-y-2 text-xs text-neutral-600">
+                    <li>✓ Market Intelligence</li>
+                    <li>✓ Competitive Mapping</li>
+                    <li>✓ Brand Architecture</li>
+                </ul>
+            </div>
+            <div class="p-8 bg-white border border-neutral-200 rounded-[2.5rem] hover:border-brand-orange transition-all">
+                <span class="text-xs font-mono text-brand-orange font-bold uppercase mb-4 block">Phase II</span>
+                <h3 class="font-display font-bold text-2xl mb-4">Institutional Engagement</h3>
+                <p class="text-neutral-500 text-sm mb-6">Stakeholder communication and relationship sequencing.</p>
+                <ul class="space-y-2 text-xs text-neutral-600">
+                    <li>✓ Investor Relations</li>
+                    <li>✓ Corporate PR Engineering</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-brand-darker py-16 text-white/40 text-center">
+    <p>© 2024 Global Link Marketing. All Rights Reserved.</p>
+</footer>
+
+<script>
+(function() {
+    gsap.fromTo('#preloader-logo', { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1 });
+    gsap.to('#preloader-bar', { width: '100%', duration: 1.5, onComplete: () => { gsap.to('#preloader', { opacity: 0, onComplete: () => { document.getElementById('preloader').style.display='none'; } }); } });
+    gsap.fromTo('#services-hero', { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 1, delay: 1.2 });
+})();
+</script>
+</body>
+</html>
